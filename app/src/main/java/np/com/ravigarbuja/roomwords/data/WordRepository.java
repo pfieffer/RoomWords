@@ -34,6 +34,10 @@ public class WordRepository {
         new insertAsyncTask(mWordDao).execute(word);
     }
 
+    public void clearDB(){
+        new clearDBAsyncTAsk(mWordDao).execute();
+    }
+
     /*
         AsyncTask to inset a Word to the database;
      */
@@ -48,6 +52,24 @@ public class WordRepository {
         @Override
         protected Void doInBackground(final Word... params) {
             mAsyncTaskDao.insert(params[0]);
+            return null;
+        }
+    }
+
+    /*
+        AsyncTask to clear the database;
+     */
+    private static class clearDBAsyncTAsk extends AsyncTask<Void, Void, Void> {
+
+        private WordDao mAsyncTaskDao;
+
+        clearDBAsyncTAsk(WordDao dao) {
+            mAsyncTaskDao = dao;
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            mAsyncTaskDao.deleteAll();
             return null;
         }
     }

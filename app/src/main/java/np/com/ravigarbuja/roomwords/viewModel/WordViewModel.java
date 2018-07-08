@@ -40,4 +40,12 @@ public class WordViewModel extends AndroidViewModel {
     public void insert(Word word) {
         mRepository.insert(word);
     }
+
+    /*
+        a wrapper clear() method that calls the Repository's clearDB() method.
+         In this way, the implementation of clear() is completely hidden from the UI.
+     */
+    public void clear() {
+        mRepository.clearDB();
+    }
 }
