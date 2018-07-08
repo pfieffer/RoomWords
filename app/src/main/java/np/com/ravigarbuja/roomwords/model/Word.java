@@ -1,4 +1,4 @@
-package np.com.ravigarbuja.roomwords;
+package np.com.ravigarbuja.roomwords.model;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;

@@ -1,9 +1,11 @@
-package np.com.ravigarbuja.roomwords;
+package np.com.ravigarbuja.roomwords.data;
 
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
+
+import np.com.ravigarbuja.roomwords.model.Word;
 
 @Database(entities = {Word.class}, version = 1)
 public abstract class WordRoomDatabase extends RoomDatabase {

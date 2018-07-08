@@ -1,4 +1,4 @@
-package np.com.ravigarbuja.roomwords;
+package np.com.ravigarbuja.roomwords.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -10,12 +10,15 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import np.com.ravigarbuja.roomwords.R;
+import np.com.ravigarbuja.roomwords.model.Word;
+
 public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordViewHolder>{
 
     private final LayoutInflater mInflater;
     private List<Word> mWords; // Cached copy of words
 
-    WordListAdapter(Context context) { mInflater = LayoutInflater.from(context); }
+    public WordListAdapter(Context context) { mInflater = LayoutInflater.from(context); }
 
     @Override
     @NonNull
@@ -35,7 +38,7 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordVi
         }
     }
 
-    void setWords(List<Word> words){
+    public void setWords(List<Word> words){
         mWords = words;
         notifyDataSetChanged();
     }

@@ -1,4 +1,4 @@
-package np.com.ravigarbuja.roomwords;
+package np.com.ravigarbuja.roomwords.viewModel;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
@@ -6,6 +6,9 @@ import android.arch.lifecycle.LiveData;
 import android.support.annotation.NonNull;
 
 import java.util.List;
+
+import np.com.ravigarbuja.roomwords.model.Word;
+import np.com.ravigarbuja.roomwords.data.WordRepository;
 
 public class WordViewModel extends AndroidViewModel {
 
@@ -25,7 +28,7 @@ public class WordViewModel extends AndroidViewModel {
     /*
         a "getter" method for all the words. This completely hides the implementation from the UI.
      */
-    LiveData<List<Word>> getAllWords() {
+    public LiveData<List<Word>> getAllWords() {
         return mAllWords;
     }
 

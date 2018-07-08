@@ -1,4 +1,4 @@
-package np.com.ravigarbuja.roomwords;
+package np.com.ravigarbuja.roomwords.data;
 
 import android.app.Application;
 import android.arch.lifecycle.LiveData;
@@ -6,11 +6,13 @@ import android.os.AsyncTask;
 
 import java.util.List;
 
+import np.com.ravigarbuja.roomwords.model.Word;
+
 public class WordRepository {
     private WordDao mWordDao;
     private LiveData<List<Word>> mAllWords;
 
-    WordRepository(Application application) {
+    public WordRepository(Application application) {
         WordRoomDatabase db = WordRoomDatabase.getDatabase(application);
         mWordDao = db.wordDao();
         mAllWords = mWordDao.getAllWords();
@@ -20,7 +22,7 @@ public class WordRepository {
      s wrapper for getAllWords(). Room executes all queries on a separate thread.
      Observed LiveData will notify the observer when the data has changed.
      */
-    LiveData<List<Word>> getAllWords() {
+    public LiveData<List<Word>> getAllWords() {
         return mAllWords;
     }
 
