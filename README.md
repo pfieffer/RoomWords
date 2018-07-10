@@ -9,7 +9,7 @@ Room, DAO, Repository, LiveData and ViewModel
 
 ## To setup:
 
-1. Download zip or Clone this repository: Type git clone git@github.com:pfieffer/RoomWords.git (SSH) or git clone https://github.com/pfieffer/RoomWords.git (HTTPS).
+1. Download zip or Clone this repository: Type `git clone git@github.com:pfieffer/RoomWords.git` (SSH) or `git clone https://github.com/pfieffer/RoomWords.git` (HTTPS).
 2. Open the project in your Android Studio(3.0.+ and gradle 4.+ recommended). Build and Run.
 
 ## Architecture overview
